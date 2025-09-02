@@ -1,13 +1,19 @@
 name = "aeons-info-v2"
-compatibility_date = "2024-09-02"
+compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
 # Astro SSR 配置
 main = "./dist/_worker.js/index.js"
 
-# KV命名空间配置 - 用于Astro Cloudflare适配器的SESSION绑定
+# KV命名空间配置
 [[kv_namespaces]]
 binding = "SESSION"
+id = "2ee892efc54c4334b7d077c97883d55e"
+preview_id = "2ee892efc54c4334b7d077c97883d55e"
+
+# 为练功计时器功能添加KV存储
+[[kv_namespaces]]
+binding = "TIMER_DATA"
 id = "2ee892efc54c4334b7d077c97883d55e"
 preview_id = "2ee892efc54c4334b7d077c97883d55e"
 
