@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import MainContent from '../../components/MainContent.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} - 永恒的信息`}>
+  <div class="flex">
+    <Navigation />
+    <MainContent 
+      title={post.data.title}
+      summary={post.data.summary}
+      date={post.data.date}
+    >
+      <Content />
+    </MainContent>
+  </div>
+</Layout>
