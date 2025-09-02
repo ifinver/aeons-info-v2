@@ -13,5 +13,9 @@ export default defineConfig({
       external: ['node:crypto', 'node:buffer']
     }
   },
-  adapter: cloudflare()
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: false
+    }
+  })
 });
