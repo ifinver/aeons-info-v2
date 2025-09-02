@@ -9,7 +9,8 @@ const { title, summary, date } = Astro.props;
 ---
 
 <main class="ml-80 min-h-screen bg-white">
-  <div class="max-w-4xl mx-auto px-8 py-12">
+  <div class="flex justify-center w-full">
+    <div class="max-w-4xl px-8 py-12">
     {title && (
       <header class="mb-8">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
@@ -27,5 +28,6 @@ const { title, summary, date } = Astro.props;
     <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-code:text-blue-600 prose-code:bg-blue-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded">
       <slot />
     </article>
+    </div>
   </div>
 </main>

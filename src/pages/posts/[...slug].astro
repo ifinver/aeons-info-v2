@@ -17,14 +17,12 @@ const { Content } = await post.render();
 ---
 
 <Layout title={`${post.data.title} - 永恒的信息`}>
-  <div class="flex">
-    <Navigation />
-    <MainContent 
-      title={post.data.title}
-      summary={post.data.summary}
-      date={post.data.date}
-    >
-      <Content />
-    </MainContent>
-  </div>
+  <Navigation />
+  <MainContent 
+    title={post.data.title}
+    summary={post.data.summary}
+    date={post.data.date}
+  >
+    <Content />
+  </MainContent>
 </Layout>
