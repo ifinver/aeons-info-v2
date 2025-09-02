@@ -1,5 +1,5 @@
 name = "aeons-info-v2"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-09-02"
 compatibility_flags = ["nodejs_compat"]
 
 # Astro SSR 配置
