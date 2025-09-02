@@ -8,9 +8,14 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   output: 'server',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    ssr: {
+      external: ['node:crypto', 'node:buffer']
+    }
   },
   adapter: cloudflare({
-    imageService: 'compile'
+    platformProxy: {
+      enabled: false
+    }
   })
 });
