@@ -13,8 +13,5 @@ export default defineConfig({
       external: ['node:crypto', 'node:buffer']
     }
   },
-  adapter: cloudflare({
-    mode: 'directory',
-    functionPerRoute: false
-  })
+  adapter: cloudflare()
 });
