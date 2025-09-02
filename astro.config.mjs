@@ -14,8 +14,7 @@ export default defineConfig({
     }
   },
   adapter: cloudflare({
-    platformProxy: {
-      enabled: false
-    }
+    mode: 'directory',
+    functionPerRoute: false
   })
 });
